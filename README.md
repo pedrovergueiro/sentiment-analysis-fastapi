@@ -56,7 +56,6 @@ Swagger / OpenAPI
 
 ReDoc
 
-README profissional (este aqui 👀)
 
 🏗️ Arquitetura da Aplicação
 Cliente -> FastAPI -> Pipeline Transformers -> Modelo HuggingFace -> Resposta JSON
@@ -135,6 +134,18 @@ docker run -p 8000:8000 sentimentflow
 curl -X POST http://localhost:8000/predict \
     -H "Content-Type: application/json" \
     -d "{\"text\": \"I love this project!\"}"
+
+    📬 Futuras melhorias
+
+Adicionar histórico de análises (banco de dados SQLModel)
+
+Dashboard em React consumindo a API
+
+Suporte a múltiplos idiomas
+
+Versionamento de modelos
+
+Deploy em cloud (Railway, Render, AWS ou GCP)
 
 🔮 Roadmap
 
