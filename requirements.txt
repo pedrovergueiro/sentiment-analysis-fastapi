@@ -1,7 +1,18 @@
-fastapi==0.100.0
-uvicorn[standard]==0.22.0
-transformers==4.40.0
-torch==2.2.0
-pydantic==1.10.11
-pytest==7.4.0
-httpx==0.24.0
+# Dependências principais da API
+fastapi>=0.100.0
+uvicorn[standard]>=0.22.0
+
+# Dependências de Machine Learning e IA
+# Nota: Na primeira execução, o modelo será baixado automaticamente
+transformers>=4.30.0
+
+# Validação de dados
+pydantic>=1.10.0
+
+# Testes
+pytest>=7.0.0
+httpx>=0.24.0
+
+# Utilitários
+python-multipart>=0.0.6
+requests>=2.28.0
