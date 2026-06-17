@@ -1,27 +1,14 @@
 # API de Análise de Sentimentos
 
-Esse foi o projeto onde tentei unir pela primeira vez machine learning com desenvolvimento de APIs. A ideia era simples: receber um texto e devolver se o sentimento era positivo, negativo ou neutro.
+Meu primeiro projeto unindo machine learning com uma API que outras pessoas poderiam consumir. A ideia era: você manda um texto, a API te diz se o sentimento é positivo, negativo ou neutro.
 
-Aprendi bastante sobre como servir um modelo de ML via API REST e, de quebra, como estruturar melhor um projeto Python — separando responsabilidades, escrevendo testes e até containerizando com Docker.
-
-Ainda tem muita coisa que eu melhoraria hoje (a análise de sentimentos em si ainda é bem básica), mas foi um projeto importante pra minha evolução.
-
-## O que aprendi
-- Integrar NLP com uma API REST usando FastAPI
-- Como o Docker facilita o deploy de projetos com dependências pesadas
-- Boas práticas de estrutura de projeto Python
-- Escrever testes básicos com pytest
-
-## Como rodar
+O modelo em si é básico — não é nenhum BERT finado — mas o desafio maior foi estruturar o projeto de forma que ele fosse de fato utilizável: Docker pra não ter problema de "na minha máquina funciona", CI com GitHub Actions pra rodar os testes automaticamente a cada push, e uma documentação que explica como usar sem precisar ler o código.
 
 ```bash
-# Com Docker
+# Testar em 30 segundos
 docker-compose up
-
-# Sem Docker
-pip install -r requirements.txt
-python run.py
+curl -X POST http://localhost:8000/analyze   -H "Content-Type: application/json"   -d '{"text": "Esse projeto foi divertido de fazer"}'
 ```
 
 ## Stack
-Python · FastAPI · Docker · NLP · pytest · GitHub Actions
+Python · FastAPI · Docker · GitHub Actions · pytest
